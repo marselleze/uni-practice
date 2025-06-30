@@ -28,7 +28,6 @@ int main()
     app()
         .addListener("0.0.0.0", 8080)
         .setThreadNum(8)\
-
         .enableServerHeader(false)
         .registerHandler("/api/hostname", &hostnameHandler, {Get})
         .run();

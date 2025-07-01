@@ -54,37 +54,65 @@ curl http://localhost:3000/api/hostname
 ### Команды для проверки:
 
 #### Переключиться на docker-среду Minikube
-```eval $(minikube docker-env)```
+```
+eval $(minikube docker-env)
+```
 
 #### Собрать Docker-образ внутри Minikube
-```docker build -t cpp-hostname-k8s:local .```
+```
+docker build -t cpp-hostname-k8s:local .
+```
 
 #### Проверить образ
-```docker images | grep cpp-hostname-k8s```
+```
+docker images | grep cpp-hostname-k8s
+```
 
 #### Старт кластера (если ещё не запущен)
-```minikube start --driver=docker```
+```
+minikube start --driver=docker
+```
 
 #### Включение необходимых аддонов
-```minikube addons enable metrics-server```
-```minikube addons enable ingress```
+```
+minikube addons enable metrics-server
+```
+```
+minikube addons enable ingress
+```
 
 #### Применяем конфигурацию манифеста (deployment, service, hpa)
-```kubectl apply -f deployment.yaml```
-```kubectl apply -f service.yaml```
-```kubectl apply -f hpa.yaml```
+```
+kubectl apply -f deployment.yaml
+```
+```
+kubectl apply -f service.yaml
+```
+```
+kubectl apply -f hpa.yaml
+```
 
 #### Проверяем статус
-```kubectl get pods -w```
-```kubectl get services```
-```kubectl get hpa```
+```
+kubectl get pods -w
+```
+```
+kubectl get services
+```
+```
+kubectl get hpa
+```
 
 #### Получить доступ к сервису
-```minikube service drogon-service --url```
+```
+minikube service drogon-service --url
+```
 #### Пример вывода: 
 http://192.168.49.2:32123
 
 #### Тестируем приложение
-```curl http://192.168.49.2:32123/api/hostname```
+```
+curl http://192.168.49.2:32123/api/hostname
+```
 #### Пример ответа: 
 ```{"hostname":"cpp-hostname-k8s-7d5f8c9b6c-2xqvh"}```

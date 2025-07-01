@@ -39,4 +39,5 @@ docker run -p 3000:3000 --rm cpp-hostname-app
 ```
 curl http://localhost:3000/api/hostname
 ```
-# Должен вернуть: ```{"hostname":"<container-id>"}```
+#### Должен вернуть: 
+```{"hostname":"<container-id>"}```

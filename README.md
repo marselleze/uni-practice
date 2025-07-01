@@ -8,7 +8,7 @@
 4. Установить Docker, изучить основные команды (docker run, docker build, docker images, docker ps).
 5. Ознакомиться с документацией Docker для начинающих.
 
-## Задание 2. Создание и контейнеризация простого C++ приложения [https://github.com/marselleze/uni-practice/tree/main/cpp-hello-app]
+## Задание 2. Создание и контейнеризация простого C++ приложения [(q)https://github.com/marselleze/uni-practice/tree/main/cpp-hello-app]
 
 1. Изучить Dockerfile: основные инструкции.
 2. Написать Dockerfile для контейнеризации C++ приложения, собрать образ и запустить контейнер.
